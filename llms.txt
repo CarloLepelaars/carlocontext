@@ -1,6 +1,6 @@
 # carlocontext
 
-Plugin marketplace for Grok, Claude Code, and Codex. `fastcore` is the first plugin.
+Plugin marketplace for Grok, Claude Code, and Codex.
 
 ## Docs
 

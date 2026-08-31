@@ -1,6 +1,6 @@
 # carlocontext
 
-This repository is a **plugin marketplace**. Add plugins under `plugins/`.
+This repository is a **plugin marketplace**. Add plugins under `plugins/`. Plugins are supported for Grok Build, Claude Code and OpenAI Codex.
 
 Skills live in `plugins/<name>/skills/<name>/SKILL.md`. Catalogs live in `.grok-plugin/`, `.claude-plugin/`, and `.agents/plugins/`.
 

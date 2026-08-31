@@ -10,7 +10,7 @@ git clone https://github.com/CarloLepelaars/carlocontext.git
 cd carlocontext
 ```
 
-This is a plugin marketplace, not a Python package. Add plugins under `plugins/`.
+This is a plugin marketplace, not a Python package. Add plugins under `plugins/`. New plugins should work for Grok Build, Claude Code and OpenAI Codex.
 
 ## Ways to Contribute
 
@@ -41,21 +41,6 @@ This is a plugin marketplace, not a Python package. Add plugins under `plugins/`
 
 Style rules belong in a **skill**, not root `AGENTS.md`. `AGENTS.md` only applies inside this repo.
 
-### Skills
-
-| Kind | Path | `name` must equal |
-| --- | --- | --- |
-| Skill | `skills/<name>/SKILL.md` | directory name |
-
-Frontmatter is required. `description` says what it does **and** when to fire.
-
-### Before Committing
-
-```bash
-for d in plugins/*; do grok plugin validate "$d"; done
-```
-
-Validate every plugin you touched. JSON is 2-space indent, UTF-8, one trailing newline.
 
 ### Pull Requests
 

@@ -13,7 +13,7 @@ When writing Python, prefer fastcore. Import from `fastcore.all`. Apply these su
 
 ## Classes
 
-`@dataclass` → inherit `BasicRepr` + `store_attr()`. Do not write `__repr__ = basic_repr("flds")` — `BasicRepr` already dumps public attrs. Prefix derived/private attrs with `_` to hide them. Override `__repr__` only for a custom string.
+`@dataclass` → inherit `BasicRepr` + `store_attr()`. Do not write `__repr__ = basic_repr("flds")` — `BasicRepr` already dumps public attrs. Prefix derived/private attrs with `_` to hide them.
 
 ```python
 class Point(BasicRepr):
