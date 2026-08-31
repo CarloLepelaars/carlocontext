@@ -9,9 +9,9 @@
   },
   "plugins": [
     {
-      "name": "carlocontext",
-      "source": "./",
-      "description": "Personal prompt package. Fastcore substitutions for Python.",
+      "name": "fastcore",
+      "source": "./plugins/fastcore",
+      "description": "Write Python with fastcore substitutions instead of stdlib patterns.",
       "version": "0.1.0"
     }
   ]

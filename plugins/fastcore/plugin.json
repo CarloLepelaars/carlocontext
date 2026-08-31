@@ -1,14 +1,19 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
-  "name": "carlocontext",
+  "name": "fastcore",
   "version": "0.1.0",
-  "description": "Personal prompt package. Fastcore substitutions for Python.",
+  "description": "Write Python with fastcore substitutions instead of stdlib patterns.",
   "author": {
     "name": "Carlo Lepelaars",
     "email": "info@carlolepelaars.nl",
     "url": "https://github.com/CarloLepelaars"
   },
-  "homepage": "https://github.com/CarloLepelaars/carlocontext",
+  "homepage": "https://github.com/CarloLepelaars/carlocontext/tree/main/plugins/fastcore",
   "repository": "https://github.com/CarloLepelaars/carlocontext",
-  "keywords": ["fastcore", "fastai", "python"]
+  "license": "MIT",
+  "keywords": [
+    "fastcore",
+    "fastai",
+    "python"
+  ]
 }

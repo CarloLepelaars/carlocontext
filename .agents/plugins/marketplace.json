@@ -5,10 +5,10 @@
   },
   "plugins": [
     {
-      "name": "carlocontext",
+      "name": "fastcore",
       "source": {
         "source": "local",
-        "path": "./"
+        "path": "./plugins/fastcore"
       },
       "policy": {
         "installation": "AVAILABLE",

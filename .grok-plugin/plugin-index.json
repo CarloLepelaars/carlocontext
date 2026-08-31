@@ -1,0 +1,16 @@
+{
+  "version": 1,
+  "plugins": {
+    "fastcore": {
+      "version": "0.1.0",
+      "components": {
+        "skills": [
+          {
+            "name": "fastcore",
+            "description": "Apply fastcore substitutions when writing, editing, or reviewing Python. Use whenever the task involves Python, fastcore, fastai, L, store_attr,…"
+          }
+        ]
+      }
+    }
+  }
+}

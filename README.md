@@ -1,22 +1,32 @@
 # carlocontext
 
-Personal prompt package. The repo is the plugin.
+Personal prompt marketplace for Grok, Claude Code, and Codex.
 
-Skill, not `AGENTS.md`, for style rules: `AGENTS.md` only applies inside this repo. A plugin skill applies in every project after install.
+Style rules live in **skills**, not root `AGENTS.md`. `AGENTS.md` only applies inside this repo.
 
 ## Install
+
+Add the marketplace, then install the plugins you need.
 
 **Grok Build**
 
 ```bash
-grok plugin install CarloLepelaars/carlocontext --trust
+grok plugin marketplace add CarloLepelaars/carlocontext
+grok plugin marketplace list
+grok plugin install CarloLepelaars/carlocontext#plugins/fastcore --trust
+```
+
+From a local clone:
+
+```bash
+grok plugin install /path/to/carlocontext/plugins/fastcore --trust
 ```
 
 **Claude Code**
 
 ```bash
 claude plugin marketplace add CarloLepelaars/carlocontext
-claude plugin install carlocontext
+claude plugin install fastcore
 ```
 
 **Codex**
@@ -25,12 +35,32 @@ claude plugin install carlocontext
 codex plugin marketplace add CarloLepelaars/carlocontext
 ```
 
-Then enable `carlocontext` in `/plugins`.
+Then enable `fastcore` in `/plugins`.
 
-If the skill does not fire on its own: `/fastcore` (Grok, Claude) or `$fastcore` (Codex).
+If a skill does not fire on its own: `/fastcore` (Grok, Claude) or `$fastcore` (Codex).
 
-## Skills
+## Plugins
 
-| Skill | Use |
+| Plugin | What you get |
 | --- | --- |
-| `fastcore` | Write Python with fastcore substitutions |
+| [fastcore](plugins/fastcore) | Write Python with fastcore substitutions |
+
+## Repo layout
+
+```
+.grok-plugin/marketplace.json    Grok catalog
+.grok-plugin/plugin-index.json   component index
+.claude-plugin/marketplace.json  Claude catalog
+.agents/plugins/marketplace.json Codex catalog
+plugins/<name>/                  first-party plugins
+```
+
+A plugin is a directory with `skills/` (and optional `commands/`, `agents/`) plus manifests under `.grok-plugin/`, `.claude-plugin/`, `.codex-plugin/`, and root `plugin.json`.
+
+## Contributing
+
+Check out the [contributing guidelines](CONTRIBUTING.md) for details on how to contribute to this project.
+
+## Credits
+
+Developed by Carlo Lepelaars.

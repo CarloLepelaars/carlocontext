@@ -1,0 +1,30 @@
+{
+  "name": "carlocontext",
+  "description": "Personal prompt package. Fastcore substitutions and Python style.",
+  "owner": {
+    "name": "Carlo Lepelaars",
+    "email": "info@carlolepelaars.nl",
+    "url": "https://github.com/CarloLepelaars"
+  },
+  "plugins": [
+    {
+      "name": "fastcore",
+      "description": "Write Python with fastcore substitutions instead of stdlib patterns.",
+      "category": "development",
+      "source": {
+        "type": "local",
+        "path": "./plugins/fastcore"
+      },
+      "homepage": "https://github.com/CarloLepelaars/carlocontext/tree/main/plugins/fastcore",
+      "keywords": [
+        "fastcore",
+        "fastai",
+        "python"
+      ],
+      "version": "0.1.0",
+      "author": {
+        "name": "Carlo Lepelaars"
+      }
+    }
+  ]
+}

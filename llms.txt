@@ -1,0 +1,23 @@
+# carlocontext
+
+llms.txt gives information for the LLM to work with.
+
+Personal prompt marketplace for Grok, Claude Code, and Codex.
+
+## Docs
+
+- [README.md](README.md) — install
+- [CONTRIBUTING.md](CONTRIBUTING.md) — add a plugin
+- [AGENTS.md](AGENTS.md) — agent conventions
+
+## Plugins
+
+- [plugins/fastcore/README.md](plugins/fastcore/README.md)
+- [plugins/fastcore/skills/fastcore/SKILL.md](plugins/fastcore/skills/fastcore/SKILL.md) — substitutions
+
+## Catalog
+
+- [.grok-plugin/marketplace.json](.grok-plugin/marketplace.json)
+- [.claude-plugin/marketplace.json](.claude-plugin/marketplace.json)
+- [.agents/plugins/marketplace.json](.agents/plugins/marketplace.json)
+- [.grok-plugin/plugin-index.json](.grok-plugin/plugin-index.json)
