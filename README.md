@@ -1,6 +1,8 @@
 # carlocontext
 
-Personal prompt marketplace for Grok, Claude Code, and Codex.
+My plugin marketplace for Grok, Claude Code, and Codex. A personal collection of agent skills and context I will open source.
+
+`fastcore` is the first plugin. More will land under `plugins/`.
 
 Style rules live in **skills**, not root `AGENTS.md`. `AGENTS.md` only applies inside this repo.
 
@@ -35,9 +37,9 @@ claude plugin install fastcore
 codex plugin marketplace add CarloLepelaars/carlocontext
 ```
 
-Then enable `fastcore` in `/plugins`.
+Then enable the plugin you want in `/plugins`.
 
-If a skill does not fire on its own: `/fastcore` (Grok, Claude) or `$fastcore` (Codex).
+If a skill does not fire on its own, invoke it by name (`/fastcore`, `$fastcore`).
 
 ## Plugins
 

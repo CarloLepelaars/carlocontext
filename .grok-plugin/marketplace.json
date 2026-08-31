@@ -1,6 +1,6 @@
 {
   "name": "carlocontext",
-  "description": "Personal prompt package. Fastcore substitutions and Python style.",
+  "description": "Personal plugin collection for coding agents. Built for my own use; intended to be open source.",
   "owner": {
     "name": "Carlo Lepelaars",
     "email": "info@carlolepelaars.nl",

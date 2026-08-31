@@ -5,7 +5,7 @@
     "email": "info@carlolepelaars.nl"
   },
   "metadata": {
-    "description": "Personal prompt package"
+    "description": "Personal plugin collection for coding agents. Built for my own use; intended to be open source."
   },
   "plugins": [
     {

@@ -1,7 +1,8 @@
 {
   "name": "carlocontext",
   "interface": {
-    "displayName": "carlocontext"
+    "displayName": "carlocontext",
+    "shortDescription": "Personal plugin collection for coding agents. Built for my own use; intended to be open source."
   },
   "plugins": [
     {

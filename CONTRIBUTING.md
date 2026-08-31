@@ -10,12 +10,12 @@ git clone https://github.com/CarloLepelaars/carlocontext.git
 cd carlocontext
 ```
 
-This is a plugin marketplace, not a Python package. No `uv sync`.
+This is a plugin marketplace, not a Python package. No `uv sync`. It is a personal collection that will be open sourced — add plugins under `plugins/`, do not fold new topics into `fastcore`.
 
 If `grok` is installed:
 
 ```bash
-grok plugin validate plugins/fastcore
+for d in plugins/*; do grok plugin validate "$d"; done
 ```
 
 Install a plugin from the checkout:
@@ -27,8 +27,8 @@ grok plugin details fastcore
 
 ## Ways to Contribute
 
-- **Fix skills**: Tighten substitutions, fix wrong fastcore APIs, add missing ones.
 - **Add plugins**: New first-party plugins live under `plugins/<kebab-name>/`.
+- **Fix skills**: Tighten instructions, fix wrong APIs, add missing cases.
 - **Improve documentation**: README, `llms.txt`, or a plugin README.
 
 ## Development Guidelines
@@ -65,7 +65,7 @@ Frontmatter is required. `description` says what it does **and** when to fire.
 ### Before Committing
 
 ```bash
-grok plugin validate plugins/fastcore
+for d in plugins/*; do grok plugin validate "$d"; done
 ```
 
 Validate every plugin you touched. JSON is 2-space indent, UTF-8, one trailing newline.

@@ -1,6 +1,6 @@
 # carlocontext
 
-This repository is a **plugin marketplace**, not a plugin and not a Python package.
+This repository is a **plugin marketplace**, not a single plugin and not a Python package. It is a personal collection of agent skills and context, intended to be open source. `fastcore` is the first plugin; add more under `plugins/`.
 
 Skills live in `plugins/<name>/skills/<name>/SKILL.md`. Catalogs live in `.grok-plugin/`, `.claude-plugin/`, and `.agents/plugins/`.
 

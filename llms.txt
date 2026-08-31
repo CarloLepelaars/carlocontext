@@ -2,7 +2,7 @@
 
 llms.txt gives information for the LLM to work with.
 
-Personal prompt marketplace for Grok, Claude Code, and Codex.
+Personal plugin collection for Grok, Claude Code, and Codex. Built for my own use; intended to be open source. `fastcore` is the first plugin.
 
 ## Docs
 
