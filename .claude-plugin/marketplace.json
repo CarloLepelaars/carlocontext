@@ -5,7 +5,7 @@
     "email": "info@carlolepelaars.nl"
   },
   "metadata": {
-    "description": "Personal plugin collection for coding agents. Built for my own use; intended to be open source."
+    "description": "Plugin marketplace for Grok, Claude Code, and Codex."
   },
   "plugins": [
     {

@@ -1,34 +1,23 @@
 # carlocontext
 
-My plugin marketplace for Grok, Claude Code, and Codex. A personal collection of agent skills and context I will open source.
+Plugin marketplace for [Grok](https://grok.com), [Claude Code](https://code.claude.com), and [Codex](https://developers.openai.com/codex).
 
-`fastcore` is the first plugin. More will land under `plugins/`.
-
-Style rules live in **skills**, not root `AGENTS.md`. `AGENTS.md` only applies inside this repo.
+Add the marketplace once, then install the plugins you want.
 
 ## Install
 
-Add the marketplace, then install the plugins you need.
-
-**Grok Build**
+**Grok**
 
 ```bash
 grok plugin marketplace add CarloLepelaars/carlocontext
-grok plugin marketplace list
 grok plugin install CarloLepelaars/carlocontext#plugins/fastcore --trust
-```
-
-From a local clone:
-
-```bash
-grok plugin install /path/to/carlocontext/plugins/fastcore --trust
 ```
 
 **Claude Code**
 
-```bash
-claude plugin marketplace add CarloLepelaars/carlocontext
-claude plugin install fastcore
+```text
+/plugin marketplace add CarloLepelaars/carlocontext
+/plugin install fastcore@carlocontext
 ```
 
 **Codex**
@@ -37,32 +26,20 @@ claude plugin install fastcore
 codex plugin marketplace add CarloLepelaars/carlocontext
 ```
 
-Then enable the plugin you want in `/plugins`.
+Then install `fastcore` from `/plugins`.
 
-If a skill does not fire on its own, invoke it by name (`/fastcore`, `$fastcore`).
+After install, the skill fires when you write Python, or invoke it with `/fastcore` (Grok, Claude) or `$fastcore` (Codex).
 
 ## Plugins
 
-| Plugin | What you get |
+| Plugin | What it does |
 | --- | --- |
-| [fastcore](plugins/fastcore) | Write Python with fastcore substitutions |
-
-## Repo layout
-
-```
-.grok-plugin/marketplace.json    Grok catalog
-.grok-plugin/plugin-index.json   component index
-.claude-plugin/marketplace.json  Claude catalog
-.agents/plugins/marketplace.json Codex catalog
-plugins/<name>/                  first-party plugins
-```
-
-A plugin is a directory with `skills/` (and optional `commands/`, `agents/`) plus manifests under `.grok-plugin/`, `.claude-plugin/`, `.codex-plugin/`, and root `plugin.json`.
+| [fastcore](plugins/fastcore) | Prefer [fastcore](https://fastcore.fast.ai) when writing Python |
 
 ## Contributing
 
-Check out the [contributing guidelines](CONTRIBUTING.md) for details on how to contribute to this project.
+See [CONTRIBUTING.md](CONTRIBUTING.md).
 
-## Credits
+## License
 
-Developed by Carlo Lepelaars.
+MIT. Developed by [Carlo Lepelaars](https://github.com/CarloLepelaars).

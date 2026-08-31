@@ -2,7 +2,7 @@
   "name": "carlocontext",
   "interface": {
     "displayName": "carlocontext",
-    "shortDescription": "Personal plugin collection for coding agents. Built for my own use; intended to be open source."
+    "shortDescription": "Plugin marketplace for Grok, Claude Code, and Codex."
   },
   "plugins": [
     {

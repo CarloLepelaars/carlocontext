@@ -1,5 +1,3 @@
-Info on contributing to this project.
-
 ## Getting Started
 
 1. Fork the repository
@@ -10,20 +8,7 @@ git clone https://github.com/CarloLepelaars/carlocontext.git
 cd carlocontext
 ```
 
-This is a plugin marketplace, not a Python package. No `uv sync`. It is a personal collection that will be open sourced — add plugins under `plugins/`, do not fold new topics into `fastcore`.
-
-If `grok` is installed:
-
-```bash
-for d in plugins/*; do grok plugin validate "$d"; done
-```
-
-Install a plugin from the checkout:
-
-```bash
-grok plugin install ./plugins/fastcore --trust
-grok plugin details fastcore
-```
+This is a plugin marketplace, not a Python package. Add plugins under `plugins/`.
 
 ## Ways to Contribute
 

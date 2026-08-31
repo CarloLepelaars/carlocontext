@@ -7,7 +7,7 @@
         "skills": [
           {
             "name": "fastcore",
-            "description": "Apply fastcore substitutions when writing, editing, or reviewing Python. Use whenever the task involves Python, fastcore, fastai, L, store_attr,…"
+            "description": "Apply fastcore substitutions when writing, editing, or reviewing Python."
           }
         ]
       }

@@ -1,6 +1,6 @@
 {
   "name": "carlocontext",
-  "description": "Personal plugin collection for coding agents. Built for my own use; intended to be open source.",
+  "description": "Plugin marketplace for Grok, Claude Code, and Codex.",
   "owner": {
     "name": "Carlo Lepelaars",
     "email": "info@carlolepelaars.nl",

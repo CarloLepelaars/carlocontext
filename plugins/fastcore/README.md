@@ -1,18 +1,24 @@
 # fastcore
 
-Write Python with fastcore substitutions instead of stdlib patterns.
+Prefer [fastcore](https://fastcore.fast.ai) when writing Python.
 
-## Install
+Install from the [carlocontext](../..) marketplace:
 
 ```bash
+# Grok
 grok plugin marketplace add CarloLepelaars/carlocontext
 grok plugin install CarloLepelaars/carlocontext#plugins/fastcore --trust
 ```
 
-## Skills
+```text
+# Claude Code
+/plugin marketplace add CarloLepelaars/carlocontext
+/plugin install fastcore@carlocontext
+```
 
-| Skill | Use |
-| --- | --- |
-| `fastcore` | Write, edit, or review Python with fastcore substitutions |
+```bash
+# Codex
+codex plugin marketplace add CarloLepelaars/carlocontext
+```
 
-If the skill does not fire: `/fastcore` (Grok, Claude) or `$fastcore` (Codex).
+Then enable `fastcore` in `/plugins`. Invoke with `/fastcore` or `$fastcore` if it does not fire on its own.
