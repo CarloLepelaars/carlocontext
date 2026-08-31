@@ -1,6 +1,6 @@
 # carlocontext
 
-Plugin marketplace for Grok, Claude Code, and Codex.
+Plugin marketplace for Grok Build, Claude Code, and OpenAI Codex.
 
 ## Docs
 

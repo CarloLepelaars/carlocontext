@@ -2,8 +2,8 @@
 
 ## Getting Started
 
-1. Fork the repository
-2. Clone your fork:
+1. Fork
+2. Clone:
 
 ```bash
 git clone https://github.com/CarloLepelaars/carlocontext.git

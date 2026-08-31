@@ -26,10 +26,4 @@ grok plugin install CarloLepelaars/carlocontext#plugins/fastcore --trust
 codex plugin marketplace add CarloLepelaars/carlocontext
 ```
 
-## Contributing
-
-See [CONTRIBUTING.md](CONTRIBUTING.md).
-
-## License
-
 Developed by [Carlo Lepelaars](https://github.com/CarloLepelaars).
