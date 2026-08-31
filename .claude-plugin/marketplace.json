@@ -1,0 +1,18 @@
+{
+  "name": "carlocontext",
+  "owner": {
+    "name": "Carlo Lepelaars",
+    "email": "info@carlolepelaars.nl"
+  },
+  "metadata": {
+    "description": "Personal prompt package"
+  },
+  "plugins": [
+    {
+      "name": "carlocontext",
+      "source": "./",
+      "description": "Personal prompt package. Fastcore substitutions for Python.",
+      "version": "0.1.0"
+    }
+  ]
+}

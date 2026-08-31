@@ -1,0 +1,20 @@
+{
+  "name": "carlocontext",
+  "interface": {
+    "displayName": "carlocontext"
+  },
+  "plugins": [
+    {
+      "name": "carlocontext",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
