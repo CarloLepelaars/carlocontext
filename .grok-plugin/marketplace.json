@@ -3,7 +3,6 @@
   "description": "Plugin marketplace for Grok, Claude Code, and Codex.",
   "owner": {
     "name": "Carlo Lepelaars",
-    "email": "info@carlolepelaars.nl",
     "url": "https://github.com/CarloLepelaars"
   },
   "plugins": [

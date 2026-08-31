@@ -4,7 +4,6 @@
   "description": "Write Python with fastcore substitutions instead of stdlib patterns.",
   "author": {
     "name": "Carlo Lepelaars",
-    "email": "info@carlolepelaars.nl",
     "url": "https://github.com/CarloLepelaars"
   },
   "homepage": "https://github.com/CarloLepelaars/carlocontext/tree/main/plugins/fastcore",

@@ -1,8 +1,7 @@
 {
   "name": "carlocontext",
   "owner": {
-    "name": "Carlo Lepelaars",
-    "email": "info@carlolepelaars.nl"
+    "name": "Carlo Lepelaars"
   },
   "metadata": {
     "description": "Plugin marketplace for Grok, Claude Code, and Codex."
