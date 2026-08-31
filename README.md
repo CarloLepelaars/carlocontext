@@ -1,6 +1,6 @@
 # carlocontext
 
-Plugin marketplace for [Grok](https://grok.com), [Claude Code](https://code.claude.com), and [Codex](https://developers.openai.com/codex).
+Plugin marketplace for Grok, [Claude Code](https://code.claude.com), and [Codex](https://developers.openai.com/codex).
 
 Add the marketplace once, then install the plugins you want.
 
@@ -28,7 +28,7 @@ codex plugin marketplace add CarloLepelaars/carlocontext
 
 Then install `fastcore` from `/plugins`.
 
-After install, the skill fires when you write Python, or invoke it with `/fastcore` (Grok, Claude) or `$fastcore` (Codex).
+Skills auto-invoke when relevant, or call them by name (`/fastcore`, `$fastcore`).
 
 ## Plugins
 

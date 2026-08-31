@@ -1,3 +1,5 @@
+# Contributing
+
 ## Getting Started
 
 1. Fork the repository
@@ -59,24 +61,7 @@ Validate every plugin you touched. JSON is 2-space indent, UTF-8, one trailing n
 
 - Keep PRs focused on a single change
 - Update catalog entries and `plugin-index.json` in the same PR
-- Reference related issues
-
-## Feature Requests
-
-Before implementing new features:
-
-1. Open a GitHub Issue to discuss the proposal
-2. Get community feedback
-3. Consider maintenance burden
 
 ## Bug Reports
 
-Include:
-
-- Which plugin / skill
-- What the agent wrote vs what it should have written
-- Environment (Grok, Claude Code, Codex)
-
-## Questions?
-
-Open a GitHub Issue for questions about the marketplace or potential contributions.
+Include the plugin or skill, what the agent wrote vs what it should have written, and which host (Grok, Claude Code, Codex).

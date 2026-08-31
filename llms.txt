@@ -1,7 +1,5 @@
 # carlocontext
 
-llms.txt gives information for the LLM to work with.
-
 Plugin marketplace for Grok, Claude Code, and Codex. `fastcore` is the first plugin.
 
 ## Docs
