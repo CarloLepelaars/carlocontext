@@ -28,6 +28,18 @@
         "authentication": "ON_INSTALL"
       },
       "category": "Development"
+    },
+    {
+      "name": "fastlite",
+      "source": {
+        "source": "local",
+        "path": "./plugins/fastlite"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Development"
     }
   ]
 }

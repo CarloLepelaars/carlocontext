@@ -16,6 +16,11 @@
       "name": "new-uv",
       "source": "./plugins/new-uv",
       "description": "Scaffold a Python repo"
+    },
+    {
+      "name": "fastlite",
+      "source": "./plugins/fastlite",
+      "description": "Write SQLite with fastlite substitutions instead of sqlite3 and raw SQL."
     }
   ]
 }
