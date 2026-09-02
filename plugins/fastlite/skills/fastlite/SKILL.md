@@ -12,64 +12,60 @@ When writing Python that talks to SQLite, prefer fastlite over `sqlite3` and raw
 
 ## Connect
 
-`sqlite3.connect(path)` → `database(path)` (WAL on by default). `:memory:` still works.
+`sqlite3.connect(path)` → `database(path)` (WAL on by default). `:memory:` still works. No `commit()` / `close()`.
 
 ```python
 db = database("app.sqlite")
-users = db.t.User
+class User: id:int; name:str; email:str
+users = db.create(User)  # table name is snake_case: user
 ```
 
 - `PRAGMA table_info` / `sqlite_master` → `db.t` (tables), `db.v` (views), `tbl.c` (columns)
-- `'User' in db.t` to test existence
+- `'user' in db.t` / `tbl.exists()` to test existence
+- `db.create(Cls)` names the table `camel2snake(Cls)` (`User` → `user`, `PetFood` → `pet_food`). Keep the return value; do not look up `db.t.User`.
 
 ## Schema
 
-`CREATE TABLE` SQL → `db.create(Cls)` or `tbl.create(...)`.
+`CREATE TABLE` SQL → `db.create(Cls)` (default `pk='id'`) or `tbl.create(...)`.
 
-```python
-class User: id:int; name:str; email:str
-users = db.create(User)
-```
-
-- `CREATE TABLE t (id INTEGER PRIMARY KEY, name TEXT)` → `db.t.t.create(id=int, name=str, pk='id')`
+- `CREATE TABLE users (id INTEGER PRIMARY KEY, name TEXT)` → `db.t.users.create(id=int, name=str, pk='id')`
 - multi-field pk → `db.create(PetFood, pk=['catid','food'])`
 - `DROP TABLE` → `tbl.drop()`
-- `CREATE VIEW` → `db.create_view("Name", sql, replace=True)` then `db.v.Name`
-- `ALTER TABLE ... ADD COLUMN` → `tbl.insert(..., alter=True)`
-- csv + inserts → `db.import_file("people", csv_or_path)`
+- `CREATE VIEW` → `db.create_view("name", sql, replace=True)` then `db.v.name`
+- `ALTER TABLE ... ADD COLUMN` → `tbl.insert(..., alter=True)` or `db.create(Cls, transform=True)`
+- csv/tsv load → `db.import_file("people", csv_text)` (str/bytes **content**, not a path)
 
 ## Read
 
-`cursor.execute(...).fetchall()` → call the table, or `db.q(sql)` for joins.
+`cursor.execute(...).fetchall()` → call the table, or `db.q(sql, params)` for joins.
 
-- `SELECT * FROM users` → `users()`
-- `SELECT * FROM users WHERE id=?` → `users[id]` / `users.get(id, default=None)`
+- `SELECT * FROM user` → `users()`
+- `SELECT * FROM user WHERE id=?` → `users[id]` / `users.get(id, default=None)` (`NotFoundError` if missing)
+- `fetchone()` (exactly one) → `users.selectone(where="name = ?", where_args=["Alice"])`
 - `WHERE name=?` → `users(where="name = ?", where_args=["Alice"])`
 - `ORDER BY` / `LIMIT` / `OFFSET` → `users(order_by="name", limit=10, offset=20)`
 - `SELECT name, email` → `users(select="name, email")`
 - composite pk → `tbl[a, b]`
 
-For SQL you still need (joins, aggregates), stringify tables/columns in f-strings and run `db.q`:
+For SQL you still need (joins, aggregates), stringify tables/columns in f-strings:
 
 ```python
-db.q(f"select * from {users} where {users.c.name} like 'A%'")
+db.q(f"select * from {users} where {users.c.name} like ?", ["A%"])
 ```
 
 ## Write
 
 - `INSERT` → `users.insert(name="Alice")` (dict, dataclass, or kwargs)
-- many rows → `users.insert_all(records)`
+- many rows → `users.insert_all(records)` (returns the table)
 - `UPDATE` → `users.update(id=1, name="Bob")`
-- `DELETE` → `users.delete(1)` (composite: `tbl.delete((a, b))`)
-- `INSERT OR REPLACE` / `ON CONFLICT` → `users.upsert(...)`
-- get-or-create → `users.lookup({"email": e}, extra_values={"name": n})`
+- `DELETE` → `users.delete(1)` (composite: `tbl.delete((a, b))`; returns the table)
+- `INSERT OR REPLACE` / `ON CONFLICT` → `users.upsert(...)` or `insert(..., replace=True)`
+- get-or-create → `users.selectone(where="email = ?", where_args=[e])` or `insert` on `NotFoundError` (do not use `lookup` to create)
 
-Inserts/updates return the row.
+`insert` / `update` / `upsert` return the row.
 
 ## Types / tenancy
 
-- `row_factory = sqlite3.Row` → `users.dataclass()` so `users()` / `users[1]` return dataclasses
+- `row_factory = sqlite3.Row` → `db.create(Cls)` already stores the class, so `users()` / `users[1]` are instances. For an existing table: `tbl.dataclass()`.
 - editor types → `create_mod(db, "db_dc")` then `from db_dc import User`
-- repeated `AND user_id=?` on every query → `users.xtra(user_id=uid)` (applies to get/insert/update/delete)
-
-Do not open `sqlite3` connections or write `CREATE TABLE` SQL when `db.create` / `tbl.create` will do.
+- repeated `AND uid=?` on every query → `users.xtra(uid=uid)` (applies to get/call/insert/update/delete). Clear with `users.xtra()`.
