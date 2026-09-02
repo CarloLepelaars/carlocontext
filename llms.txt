@@ -12,6 +12,8 @@ Plugin marketplace for Grok Build, Claude Code, and OpenAI Codex.
 
 - [plugins/fastcore/README.md](plugins/fastcore/README.md)
 - [plugins/fastcore/skills/fastcore/SKILL.md](plugins/fastcore/skills/fastcore/SKILL.md) — substitutions
+- [plugins/new-uv/README.md](plugins/new-uv/README.md)
+- [plugins/new-uv/skills/new-uv/SKILL.md](plugins/new-uv/skills/new-uv/SKILL.md) — scaffold from uv_template
 
 ## Catalog
 

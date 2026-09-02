@@ -12,6 +12,12 @@
       "source": "./plugins/fastcore",
       "description": "Write Python with fastcore substitutions instead of stdlib patterns.",
       "version": "0.1.0"
+    },
+    {
+      "name": "new-uv",
+      "source": "./plugins/new-uv",
+      "description": "Scaffold a ready Python repo from CarloLepelaars/uv_template.",
+      "version": "0.1.0"
     }
   ]
 }

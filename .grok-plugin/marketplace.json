@@ -24,6 +24,25 @@
       "author": {
         "name": "Carlo Lepelaars"
       }
+    },
+    {
+      "name": "new-uv",
+      "description": "Scaffold a ready Python repo from CarloLepelaars/uv_template.",
+      "category": "development",
+      "source": {
+        "type": "local",
+        "path": "./plugins/new-uv"
+      },
+      "homepage": "https://github.com/CarloLepelaars/carlocontext/tree/main/plugins/new-uv",
+      "keywords": [
+        "uv",
+        "python",
+        "scaffold"
+      ],
+      "version": "0.1.0",
+      "author": {
+        "name": "Carlo Lepelaars"
+      }
     }
   ]
 }

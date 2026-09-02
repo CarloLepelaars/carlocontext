@@ -11,6 +11,17 @@
           }
         ]
       }
+    },
+    "new-uv": {
+      "version": "0.1.0",
+      "components": {
+        "skills": [
+          {
+            "name": "new-uv",
+            "description": "Scaffold a ready Python repo from CarloLepelaars/uv_template."
+          }
+        ]
+      }
     }
   }
 }
