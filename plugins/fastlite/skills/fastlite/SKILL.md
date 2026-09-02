@@ -33,7 +33,6 @@ users = db.create(User)  # table name is snake_case: user
 - `DROP TABLE` → `tbl.drop()`
 - `CREATE VIEW` → `db.create_view("name", sql, replace=True)` then `db.v.name`
 - `ALTER TABLE ... ADD COLUMN` → add the field on `Cls` and `db.create(Cls, transform=True)` (same class name). `insert(..., alter=True)` only if the table has no stored class; otherwise refresh with `tbl.dataclass()`.
-- csv/tsv load → `db.import_file("people", csv_text)` (str/bytes **content**, not a path)
 
 ## Read
 
@@ -64,8 +63,48 @@ db.q(f"select * from {users} where {users.c.name} like ?", ["A%"])
 
 `insert` / `update` / `upsert` return the row.
 
-## Types / tenancy
+## Dataclass
 
-- `row_factory = sqlite3.Row` → `db.create(Cls)` already stores the class, so `users()` / `users[1]` are instances. For an existing table: `tbl.dataclass()`.
-- editor types → `create_mod(db, "db_dc")` then `from db_dc import User`
-- repeated `AND uid=?` on every query → `users.xtra(uid=uid)` (applies to get/call/insert/update/delete). Clear with `users.xtra()`.
+`sqlite3.Row` / hand-built `@dataclass` matching the schema → `tbl.dataclass()` (or `db.create(Cls)`, which already stores the class).
+
+```python
+AlbumDC = album.dataclass()          # stores album.cls; album() / album[1] return AlbumDC
+album_obj = AlbumDC(**row_dict)
+src = dataclass_src(AlbumDC)         # from fastcore.xtras; fields are nullable
+```
+
+- `conn.row_factory = sqlite3.Row` → `tbl.dataclass()` then `tbl()` / `tbl[pk]`
+- `tbl(with_pk=1)` → `[(pk, row), ...]`
+- editor / mypy stubs → `create_mod(db, "db_dc")` then `from db_dc import Track` (writes `db_dc.py`; class names are `table.title()`, e.g. `user` → `User`)
+- `db.link_dcs(mod)` to attach an imported module back onto the tables
+
+`dataclass()` is dynamic (Jupyter autocomplete only). Use `create_mod` when the editor needs real classes.
+
+## Diagrams
+
+Manual ERD / `PRAGMA foreign_key_list` sketches → `diagram(...)`. Needs [graphviz](https://pypi.org/project/graphviz/).
+
+```python
+diagram(db.t['Artist','Album','Track'], size=8, ratio=0.4)   # Jupyter
+dot = diagram(db.t['Artist','Album'], render=False)          # DOT string; no render
+```
+
+- subset of tables → `db.t['Artist','Album']`
+- `neato=True` for a force-directed layout
+
+## Import
+
+`csv.reader` / `csv.DictReader` + `CREATE TABLE` + insert loop → `db.import_file`.
+
+```python
+people = db.import_file("people", "id,name,age\n1,Alice,30\n")
+```
+
+- argument is str/bytes **content**, not a path string (path strings fail)
+- `pk="id"` to set a primary key after import
+- `alter=True` to add columns on an existing table
+- format inferred (csv/tsv); pass `format="csv"` if needed
+
+## Tenancy
+
+repeated `AND uid=?` on every query → `users.xtra(uid=uid)` (applies to get/call/insert/update/delete). Clear with `users.xtra()`.
