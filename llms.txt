@@ -20,4 +20,3 @@ Plugin marketplace for Grok Build, Claude Code, and OpenAI Codex.
 - [.grok-plugin/marketplace.json](.grok-plugin/marketplace.json)
 - [.claude-plugin/marketplace.json](.claude-plugin/marketplace.json)
 - [.agents/plugins/marketplace.json](.agents/plugins/marketplace.json)
-- [.grok-plugin/plugin-index.json](.grok-plugin/plugin-index.json)

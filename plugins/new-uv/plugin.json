@@ -14,5 +14,6 @@
     "uv",
     "python",
     "scaffold"
-  ]
+  ],
+  "skills": "./skills/"
 }

@@ -11,24 +11,15 @@ Do not put always-on style rules in this file — they only apply inside this re
 ### Add or change a plugin
 
 1. Create or edit `plugins/<kebab-name>/`.
-2. Ship at least:
-   - `.grok-plugin/plugin.json`
-   - `.claude-plugin/plugin.json`
-   - `.codex-plugin/plugin.json`
-   - `plugin.json` (Agent Plugins 1.0)
-   - `README.md`
-   - `LICENSE` (MIT)
-3. Add only the component directories you use (`skills/`, `commands/`, `agents/`).
-4. Add or update the entry in:
-   - `.grok-plugin/marketplace.json`
-   - `.claude-plugin/marketplace.json`
-   - `.agents/plugins/marketplace.json`
-   - `.grok-plugin/plugin-index.json`
-5. Keep `name` stable. Renaming a published slug breaks existing installs.
-6. Bump `version` in the manifests and catalog entries when behavior changes.
+2. Ship `plugin.json`, `README.md`, and `LICENSE` (MIT).
+3. Point the host manifests at that file:
+   ```bash
+   ln -s ../plugin.json .grok-plugin/plugin.json
+   ln -s ../plugin.json .claude-plugin/plugin.json
+   ln -s ../plugin.json .codex-plugin/plugin.json
+   ```
+4. Add only the component directories you use (`skills/`, `commands/`, `agents/`).
+5. Add `{name, source, description}` to `.grok-plugin/marketplace.json` and `.claude-plugin/marketplace.json`. Add `{name, source}` to `.agents/plugins/marketplace.json`.
+6. Keep `name` stable. Bump `version` in `plugin.json` when behavior changes.
 
-## After every plugin or catalog edit
-
-1. Update `.grok-plugin/marketplace.json`, `.claude-plugin/marketplace.json`, and `.agents/plugins/marketplace.json`.
-
-Keep `name` stable. Empty component directories are worse than omitting them.
+Empty component directories are worse than omitting them.
