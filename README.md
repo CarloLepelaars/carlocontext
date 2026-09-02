@@ -1,6 +1,6 @@
 # carlocontext
 
-Plugin marketplace for [Grok Build](https://grok.com/build), [Claude Code](https://code.claude.com), and [Codex](https://developers.openai.com/codex).
+Plugin marketplace for [Grok Build](https://grok.com/build), [Claude Code](https://code.claude.com), and [OpenAI Codex](https://openai.com/codex).
 
 Add the marketplace and install the plugins you want.
 
@@ -18,7 +18,7 @@ grok plugin marketplace add CarloLepelaars/carlocontext
 /plugin marketplace add CarloLepelaars/carlocontext
 ```
 
-**Codex**
+**OpenAI Codex**
 
 ```bash
 codex plugin marketplace add CarloLepelaars/carlocontext
