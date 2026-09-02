@@ -32,7 +32,7 @@ users = db.create(User)  # table name is snake_case: user
 - multi-field pk → `db.create(PetFood, pk=['catid','food'])`
 - `DROP TABLE` → `tbl.drop()`
 - `CREATE VIEW` → `db.create_view("name", sql, replace=True)` then `db.v.name`
-- `ALTER TABLE ... ADD COLUMN` → `tbl.insert(..., alter=True)` or `db.create(Cls, transform=True)`
+- `ALTER TABLE ... ADD COLUMN` → add the field on `Cls` and `db.create(Cls, transform=True)` (same class name). `insert(..., alter=True)` only if the table has no stored class; otherwise refresh with `tbl.dataclass()`.
 - csv/tsv load → `db.import_file("people", csv_text)` (str/bytes **content**, not a path)
 
 ## Read
