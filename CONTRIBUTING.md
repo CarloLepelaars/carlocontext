@@ -23,21 +23,11 @@ This is a plugin marketplace, not a Python package. Add plugins under `plugins/`
 ### Add or change a plugin
 
 1. Create or edit `plugins/<kebab-name>/`.
-2. Ship at least:
-   - `.grok-plugin/plugin.json`
-   - `.claude-plugin/plugin.json`
-   - `.codex-plugin/plugin.json`
-   - `plugin.json` (Agent Plugins 1.0)
-   - `README.md`
-   - `LICENSE` (MIT)
-3. Add only the component directories you use (`skills/`, `commands/`, `agents/`).
-4. Add or update the entry in:
-   - `.grok-plugin/marketplace.json`
-   - `.claude-plugin/marketplace.json`
-   - `.agents/plugins/marketplace.json`
-   - `.grok-plugin/plugin-index.json`
-5. Keep `name` stable. Renaming a published slug breaks existing installs.
-6. Bump `version` in the manifests and catalog entries when behavior changes.
+2. Ship `plugin.json`, `README.md`, and `LICENSE` (MIT).
+3. Symlink `plugin.json` into `.grok-plugin/`, `.claude-plugin/`, and `.codex-plugin/`.
+4. Add only the component directories you use (`skills/`, `commands/`, `agents/`).
+5. List the plugin in the three `marketplace.json` files.
+6. Keep `name` stable. Bump `version` in `plugin.json` when behavior changes.
 
 Style rules belong in a **skill**, not root `AGENTS.md`. `AGENTS.md` only applies inside this repo.
 
@@ -45,7 +35,7 @@ Style rules belong in a **skill**, not root `AGENTS.md`. `AGENTS.md` only applie
 ### Pull Requests
 
 - Keep PRs focused on a single change
-- Update catalog entries and `plugin-index.json` in the same PR
+- Update the three `marketplace.json` files in the same PR
 
 ## Bug Reports
 

@@ -1,18 +1,1 @@
-{
-  "name": "fastcore",
-  "version": "0.1.0",
-  "description": "Write Python with fastcore substitutions instead of stdlib patterns.",
-  "author": {
-    "name": "Carlo Lepelaars",
-    "url": "https://github.com/CarloLepelaars"
-  },
-  "homepage": "https://github.com/CarloLepelaars/carlocontext/tree/main/plugins/fastcore",
-  "repository": "https://github.com/CarloLepelaars/carlocontext",
-  "license": "MIT",
-  "keywords": [
-    "fastcore",
-    "fastai",
-    "python"
-  ],
-  "skills": "./skills/"
-}
+../plugin.json
