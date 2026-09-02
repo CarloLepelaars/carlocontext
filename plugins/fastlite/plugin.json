@@ -1,0 +1,19 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "fastlite",
+  "version": "0.1.0",
+  "description": "Write SQLite with fastlite substitutions",
+  "author": {
+    "name": "Carlo Lepelaars",
+    "url": "https://github.com/CarloLepelaars"
+  },
+  "homepage": "https://github.com/CarloLepelaars/carlocontext/tree/main/plugins/fastlite",
+  "repository": "https://github.com/CarloLepelaars/carlocontext",
+  "license": "MIT",
+  "keywords": [
+    "fastlite",
+    "sqlite",
+    "python"
+  ],
+  "skills": "./skills/"
+}
