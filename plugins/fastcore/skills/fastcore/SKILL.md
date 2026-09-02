@@ -2,14 +2,13 @@
 name: fastcore
 description: >
   Apply fastcore substitutions when writing, editing, or reviewing Python.
-  Use whenever the task involves Python, fastcore, fastai, L, store_attr,
-  BasicRepr, Path, or replacing stdlib dataclass/json/pathlib/argparse patterns.
-when-to-use: writing Python, editing Python, reviewing Python, fastcore, fastai
+  Use whenever the task involves Python, fastcore, Path, or writing stdlib dataclass/json/pathlib/argparse patterns.
+when-to-use: writing Python, editing Python, reviewing Python, fastcore
 ---
 
 # fastcore
 
-When writing Python, prefer fastcore. Import from `fastcore.all`. Apply these substitutions on write and review.
+When writing Python, prefer fastcore over standard Python. Use `from fastcore.all import *`. Apply these substitutions on write and review.
 
 ## Classes
 
