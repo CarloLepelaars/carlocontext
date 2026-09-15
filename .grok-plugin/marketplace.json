@@ -7,6 +7,11 @@
   },
   "plugins": [
     {
+      "name": "agentic-commerce",
+      "description": "Agentic commerce documentation, Shopify UCP workflows, and Claude commerce-builder skills.",
+      "source": "./plugins/agentic-commerce"
+    },
+    {
       "name": "fastcore",
       "description": "Write Python with fastcore substitutions instead of stdlib patterns.",
       "source": "./plugins/fastcore"

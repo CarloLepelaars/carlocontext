@@ -1,5 +1,4 @@
 {
-  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "fastlite",
   "version": "0.1.0",
   "description": "Write SQLite with fastlite substitutions",
@@ -15,5 +14,14 @@
     "sqlite",
     "python"
   ],
-  "skills": "./skills/"
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "fastlite",
+    "shortDescription": "Write SQLite with fastlite.",
+    "longDescription": "Use fastlite for concise SQLite database work in Python.",
+    "developerName": "Carlo Lepelaars",
+    "category": "Development",
+    "capabilities": ["Code generation"],
+    "defaultPrompt": ["Help me build database infrastructure."]
+  }
 }

@@ -40,6 +40,18 @@
         "authentication": "ON_INSTALL"
       },
       "category": "Development"
+    },
+    {
+      "name": "agentic-commerce",
+      "source": {
+        "source": "local",
+        "path": "./plugins/agentic-commerce"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Development"
     }
   ]
 }

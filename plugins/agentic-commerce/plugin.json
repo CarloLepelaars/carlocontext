@@ -1,0 +1,27 @@
+{
+  "name": "agentic-commerce",
+  "version": "0.3.0",
+  "description": "Agentic commerce documentation, Shopify UCP workflows, and Claude commerce-builder skills.",
+  "author": {
+    "name": "Carlo Lepelaars",
+    "url": "https://github.com/CarloLepelaars"
+  },
+  "homepage": "https://github.com/CarloLepelaars/carlocontext/tree/main/plugins/agentic-commerce",
+  "repository": "https://github.com/CarloLepelaars/carlocontext",
+  "license": "MIT AND Apache-2.0",
+  "keywords": [
+    "agentic-commerce",
+    "acp",
+    "ucp"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Agentic Commerce",
+    "shortDescription": "Build ACP, UCP, and Claude commerce agents.",
+    "longDescription": "Guidance for agentic commerce integrations, Shopify UCP, ACP, and Claude commerce-builder workflows.",
+    "developerName": "Carlo Lepelaars",
+    "category": "Development",
+    "capabilities": ["Code generation", "Documentation"],
+    "defaultPrompt": ["Help me use the Agentic Commerce Protocol"]
+  }
+}

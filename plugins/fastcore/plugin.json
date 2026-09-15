@@ -1,5 +1,4 @@
 {
-  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "fastcore",
   "version": "0.1.0",
   "description": "Write Python with fastcore substitutions instead of stdlib patterns.",
@@ -15,5 +14,14 @@
     "fastai",
     "python"
   ],
-  "skills": "./skills/"
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "fastcore",
+    "shortDescription": "Write Python with fastcore patterns.",
+    "longDescription": "Use fastcore utilities and idioms in Python projects.",
+    "developerName": "Carlo Lepelaars",
+    "category": "Development",
+    "capabilities": ["Code generation"],
+    "defaultPrompt": ["Help me write Python with fastcore."]
+  }
 }

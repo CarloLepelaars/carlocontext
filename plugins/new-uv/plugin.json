@@ -1,5 +1,4 @@
 {
-  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "new-uv",
   "version": "0.1.0",
   "description": "Scaffold a Python repo",
@@ -15,5 +14,14 @@
     "python",
     "scaffold"
   ],
-  "skills": "./skills/"
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "new-uv",
+    "shortDescription": "Scaffold a Python project with uv.",
+    "longDescription": "Create a complete Python repository from the uv template.",
+    "developerName": "Carlo Lepelaars",
+    "category": "Development",
+    "capabilities": ["Code generation"],
+    "defaultPrompt": ["Help me start a new Python project"]
+  }
 }
