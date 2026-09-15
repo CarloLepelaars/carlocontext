@@ -6,6 +6,11 @@ Includes the [distribution skill](skills/distribution/SKILL.md), ACP and UCP doc
 
 Install from the [marketplace README](../../README.md).
 
+See [MCP server guidance](references/mcp-servers.md) for optional Shopify,
+Stripe, and PayPal integrations. The plugin does not register a default MCP
+server because Shopify endpoints are merchant-specific and payment servers
+require account authorization.
+
 ## Shopify UCP
 
 Includes Shopify's [UCP skill](skills/ucp/SKILL.md) for catalog search, merchant discovery, profiles, carts, checkout, and order tracking using merchant capabilities and live schemas.
